@@ -1,27 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 
-function PizzaBlock(){
+
+function PizzaBlock({name,price,imageUrl,types,sizes}){
+
+  const [activeType,setActiveType] = useState();
+  const [activeSize,setActiveSize] = useState();
+  const typeNames =["thin crust","standart crust"]
+
     return(
         <div className="pizza-block">
         <img
           className="pizza-block__image"
-          src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+          src={imageUrl}
           alt="Pizza"
         />
-        <h4 className="pizza-block__title">Peperoni</h4>
+        <h4 className="pizza-block__title">{name}</h4>
         <div className="pizza-block__selector">
           <ul>
-            <li className="active">thin crust</li>
-            <li>standart</li>
+            {types.map(typeIndex=>(
+               <li onClick={()=>setActiveType(typeIndex)}
+                className={activeType === typeIndex ? "active":""}
+               >{typeNames[typeIndex]}</li>
+            ))}
           </ul>
           <ul>
-            <li className="active">26 см.</li>
-            <li>30 cm.</li>
-            <li>40 cm.</li>
+            {sizes.map((size,i)=>(
+               <li onClick={()=>setActiveSize(i)}
+               className={activeSize === i ? "active":""}>{size} cm.</li>
+            ))}
           </ul>
         </div>
         <div className="pizza-block__bottom">
-          <div className="pizza-block__price">from 7$</div>
+          <div className="pizza-block__price">from {price}$</div>
           <div className="button button--outline button--add">
             <svg
               width="12"
