@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 
-function PizzaBlock({name,price,imageUrl,types,sizes}){
+function PizzaBlock({title,price,imageUrl,types,sizes}){
 
   const [activeType,setActiveType] = useState();
   const [activeSize,setActiveSize] = useState();
@@ -14,7 +14,7 @@ function PizzaBlock({name,price,imageUrl,types,sizes}){
           src={imageUrl}
           alt="Pizza"
         />
-        <h4 className="pizza-block__title">{name}</h4>
+        <h4 className="pizza-block__title">{title}</h4>
         <div className="pizza-block__selector">
           <ul>
             {types.map(typeIndex=>(
