@@ -1,0 +1,45 @@
+.root{
+    position: relative;
+  
+    .input{
+        padding: 12px 20px;
+        width: 300px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding-left: 40px;
+        transition: all 0.15s ease-in-out;
+        &:focus{
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            width: 400px;
+        }
+        @media (max-width:1040px) {
+          width: 300px;
+          }
+          @media (max-width:900px) {
+            width: 200px;
+            }        
+    }
+    
+    .icon{
+        &__search{
+            width: 16px;
+            height: 16px;
+            opacity: 0.3;
+            position: absolute;
+            left: 14px;
+            top:13px
+        }
+        &__clouse{
+            width: 18px;
+            height: 18px;
+            opacity: 0.3;
+            position: absolute;
+            right: 14px;
+            top:13px;
+            cursor: pointer;
+            &:hover{
+                opacity: 0.8;
+            }
+        }
+    }
+}
