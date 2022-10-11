@@ -17,7 +17,6 @@ const onClickClear = ()=>{
 
 const updateSearchValue = useCallback(
   debounce((str)=>{
-    console.log(str)
     setSearchValue(str)
   },250),[]
 )
