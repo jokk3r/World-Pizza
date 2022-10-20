@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   Link
  } from "react-router-dom";
+import CartEmpty from '../components/CartEmpty/CartEmpty';
 import CartItem from '../components/CartItem/CartItem';
 import { clearItems } from '../redux/slices/cartSlice';
 
@@ -17,7 +18,11 @@ function Cart() {
     if(window.confirm('Are you sure you want to remove all pizzas?')){
         dispatch(clearItems())
     }
-}
+  }
+  
+  if(!totalPrice){
+    return <CartEmpty/>
+  }
 
   return (
     <div className="container container--cart">

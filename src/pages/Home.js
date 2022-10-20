@@ -67,7 +67,6 @@ function Home() {
       const search = searchValue  ? `&search=${searchValue}`:"";
       axios.get(`https://63287ed29a053ff9aab95e51.mockapi.io/items?page=${currentPage}&limit=4&${category}&sortBy=${sort.sortProperty}&order=${sort.sortOrder}${search}`)
       .then((res) =>{
-        console.log(res.data)
           setItems(res.data)
           setIsLoading(false)
         })
