@@ -1,3 +1,5 @@
+@import '../../scss/variables';
+
 .root{
     text-align: center;
     padding: 100px;
@@ -9,5 +11,20 @@
 }
 
 .description{
-    font-style: 22px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #989898;
+    margin-top: 12px;
+    margin-bottom: 24px;
+}
+
+.header{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 30px;
+    color: $black;
+    margin-top: 30px;
 }

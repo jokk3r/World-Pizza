@@ -1,28 +1,47 @@
+@import '../../scss/variables';
+
 .root{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:  30px 0;
+
+    &:first-child{
+        border: none;
+    }
+    
     li{
-        display: inline-block;
+        
         a{
             display: inline-block;
             text-align: center;
-            width: 45px;
             line-height: 42px;
-            height: 45px;
-            border: 1px solid #fe5f1e;
-            border-radius: 30px;
+            border: none;
+            padding: 0 16px;
+            border-radius: 10px;
             margin-left: 10px;
             cursor: pointer;
-            color:#fe5f1e;
-            &:hover{
-                background-color: #fe5f1e;
-                color: #fff;
-            }
+            color:$black;
+            border: 1px solid #C5C5C5;
         }
     }
     :global{
+        .previous{
+            a{
+                display: flex;
+                border: none;
+            }
+        }
         .selected{
             a{
-                background-color: #fe5f1e;
-                color: #fff; 
+                background-color: #EFEFEF;
+                border: none;
+            }
+        }
+        .next{
+            a{
+                display: flex;
+                border: none;
             }
         }
     }

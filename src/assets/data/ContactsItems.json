@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Phone",
+        "value": "+49 199 99 99 99"
+    },
+    {
+        "name": "Main adress",
+        "value": "168 Harrington Rd Clifton, New Jersey(NJ), 07012"
+    },
+    {
+        "name": "E-mail",
+        "value": "World_of_Pizza@gmail.com"
+    },
+    {
+        "name": "Working hours",
+        "value": "08:00 — 22:00"
+    }
+]

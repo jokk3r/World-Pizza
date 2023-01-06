@@ -1,16 +1,17 @@
 import React from 'react'
-
 import styles from './NotFoundBlock.module.scss';
+import error from './../../assets/img/404error.png'
+import { Link } from 'react-router-dom';
 
 function NotFoundBlock() {
   return (
     <div className={styles.root}>
-        <h1>
-            <span>&#128533;</span>
-            <br />
-            nothing found
-        </h1>
-        <p className={styles.description}>Unfortunately, this page was not found on our website</p>
+        <img src={error} alt="error" />
+        <h3 className={styles.header}> Page not found</h3>
+        <p className={styles.description}>Sorry, page you were looking for does not exist</p>
+        <Link to="/">
+          <div className="button about__button">Choose pizza</div>
+        </Link>
     </div>
   )
 }
