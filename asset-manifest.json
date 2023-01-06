@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/World-Pizza/static/css/main.1bffbeaf.css",
+    "main.js": "/World-Pizza/static/js/main.4d79d4dc.js",
+    "static/media/imgMainMobile.svg": "/World-Pizza/static/media/imgMainMobile.37d4c99f3d194f59d7e787026167919e.svg",
+    "static/media/imgMainDesk.svg": "/World-Pizza/static/media/imgMainDesk.14fc7206d1c2f9b4214c53e6eb40210f.svg",
+    "static/media/about-main.png": "/World-Pizza/static/media/about-main.86844ba5f74baadc643e.png",
+    "static/media/logo-main.svg": "/World-Pizza/static/media/logo-main.2d8fedb72e1ef80ce2dba9aea61a1f0b.svg",
+    "static/media/logo-black.svg": "/World-Pizza/static/media/logo-black.9b75b6d3a33afaa040519440d6531f66.svg",
+    "static/media/cart-empty.svg": "/World-Pizza/static/media/cart-empty.5d4637353f8ebdb48ffb7c18c765f4c9.svg",
+    "static/media/cart.svg": "/World-Pizza/static/media/cart.e0b31d96c7e060f80eae20d1c1429ade.svg",
+    "index.html": "/World-Pizza/index.html",
+    "static/media/call.svg": "/World-Pizza/static/media/call.ae3aaee5edcf463aced31da1bada0ed3.svg",
+    "static/media/trash-icon.svg": "/World-Pizza/static/media/trash-icon.25406df2ba0a7007d3b76faecbcb3ad9.svg",
+    "static/media/Search.svg": "/World-Pizza/static/media/Search.4883cf1f321d8b6d66e2166d1acf22d2.svg",
+    "static/media/cross-red.svg": "/World-Pizza/static/media/cross-red.100b41d709756fe59590047ab0592e6e.svg",
+    "static/media/cart-plus.svg": "/World-Pizza/static/media/cart-plus.471ae3afec35ab8dae7d4a9a7b90b70d.svg",
+    "static/media/arrow.svg": "/World-Pizza/static/media/arrow.1e0aaf387c5b33e1b63c4c3a72d35a39.svg",
+    "static/media/right.svg": "/World-Pizza/static/media/right.c121f38f8072eb90b248162fabaa8afd.svg",
+    "static/media/left.svg": "/World-Pizza/static/media/left.a1d44b4d02f53f3820ab750e744e8376.svg",
+    "static/media/back-arrow.svg": "/World-Pizza/static/media/back-arrow.866b14c77d83b96484764bf221568cc6.svg",
+    "static/media/cart-minus.svg": "/World-Pizza/static/media/cart-minus.7f5a76b08690538e65f2672d3e5b9de4.svg",
+    "main.1bffbeaf.css.map": "/World-Pizza/static/css/main.1bffbeaf.css.map",
+    "main.4d79d4dc.js.map": "/World-Pizza/static/js/main.4d79d4dc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1bffbeaf.css",
+    "static/js/main.4d79d4dc.js"
+  ]
+}
