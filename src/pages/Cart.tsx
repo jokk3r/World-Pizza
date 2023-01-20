@@ -9,12 +9,12 @@ import { selectCart, clearItems } from '../redux/slices/cartSlice';
 import cross from './../assets/img/cross-red.svg'
 import back from './../assets/img/back-arrow.svg'
 
-function Cart() {
+const Cart: React.FC = () => {
 
   const dispatch = useDispatch();
   const {items, totalPrice} = useSelector(selectCart)
 
-  const totalCount = items.reduce((sum, item)=> sum + item.count, 0)
+  const totalCount = items.reduce((sum:number, item:any)=> sum + item.count, 0)
 
   const onClickClear = () =>{
     if(window.confirm('Are you sure you want to remove all pizzas?')){
@@ -38,7 +38,7 @@ function Cart() {
       </div>
       <div className="content__items">
         {
-          items.map(item => <CartItem key={item.id} {...item}/>)
+          items.map((item: any) => <CartItem key={item.id} {...item}/>)
         }
       </div>
       <div className="cart__bottom">
@@ -51,7 +51,7 @@ function Cart() {
           <div className="button button__pay">
             <span>Pay now</span>
           </div>
-          <Link className="button  button__back " to="/">
+          <Link className="button  button__back " to="/World-of-Pizza">
             <span><img src={back} alt="back" /> Back</span>
           </Link>
         </div>

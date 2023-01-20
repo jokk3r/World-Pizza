@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { useWindowWidth } from '../../hooks/useWindowWidth';
 
 function Footer() {
-  const {width} = useWindowWidth();
+  const [width] = useWindowWidth();
   return (
     <div className={styles.footer__main}>
       {width > 809 ?
@@ -18,19 +18,19 @@ function Footer() {
             </div>
         </div >
         <div className={styles.footer__nav}>
-            <Link to="/">Choose Pizza</Link>
-            <Link to="/about">About</Link>
-            <Link to="contacts">Contacts</Link>
-        </div>
-        <div className={styles.footer__text}><p> World of Pizza © 2023</p>
+            <Link to="/World-of-Pizza">Choose Pizza</Link>
+            <Link to="/World-of-Pizza/about">About</Link>
+            <Link to="/World-of-Pizza/contacts">Contacts</Link>
+            <div className={styles.footer__text}><p> World of Pizza © 2023</p>
+            </div>
         </div>
       </>
      ):  (
      <>
       <div className={styles.footer__nav}>
-          <Link to="/">Choose Pizza</Link>
-          <Link to="/about">About</Link>
-          <Link to="contacts">Contacts</Link>
+          <Link to="/World-of-Pizza">Choose Pizza</Link>
+          <Link to="/World-of-Pizza/about">About</Link>
+          <Link to="/World-of-Pizza/contacts">Contacts</Link>
       </div>
       <div className={styles.footer__contactInfo}>
           <img src={logoBlack} alt="logo-black" />

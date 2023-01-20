@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 import { useWindowWidth } from '../../hooks/useWindowWidth';
 import Search from '../Search/Search';
 
+type CategoriesProps ={
+  value:number;
+  onChangeCategory: (i: number) => void
+}
+const categories =["All","Meatlover","Veggie","Traditional","Hot","Spicy",]
 
-function Categories({value, onChangeCategory}){
+const Categories: React.FC<CategoriesProps> = ({value, onChangeCategory})=>{
 
-  const categories =["All","Meatlover","Veggie","Traditional","Hot","Spicy",]
- const {width} = useWindowWidth();
+  const [width] = useWindowWidth();
     return(
       <div className="categories">
         <ul>

@@ -1,43 +1,44 @@
-import axios from 'axios';
 import React, {useState} from 'react'
+import axios from 'axios';
 import {useDispatch, useSelector} from 'react-redux'
 import { useEffect } from 'react';
 import {useNavigate, useParams} from 'react-router-dom'
-import {addItem, selectCartItemById} from '../redux/slices/cartSlice'
+import {addItem, CartItem, selectCartItemById} from '../redux/slices/cartSlice'
 import iconCart from '../assets/img/cart.svg';
 import { useWindowWidth } from '../hooks/useWindowWidth';
 
-const FullPizza = () => {
-  const [pizza, setPizza] = useState();
+
+const FullPizza: React.FC = () => {
+  
+  const [pizza, setPizza] = useState<{
+    id: string;
+    imageUrl: string;
+    title: string;
+    price: number;
+    types: number[];
+    energyValue: {name: string; value: string}[];
+    sizes: number[];
+    description: string;
+    ingridients:{name: string; url: string;}[];
+  }>();
+
   const {id} = useParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const cartItem = useSelector(selectCartItemById(id))
-  const [activeType,setActiveType] = useState();
-  const [activeSize,setActiveSize] = useState();
+  const cartItem = useSelector(selectCartItemById(id as string))
+  const [activeType,setActiveType] = useState(0);
+  const [activeSize,setActiveSize] = useState(0);
   const typeNames =["Thin","Standart"]
-  const {width} = useWindowWidth();
+  const [width] = useWindowWidth();
 
   const addedCount = cartItem ? cartItem.count : 0
-  const onClickAdd = () => {
-    const item = {
-      id : pizza.id,
-      title : pizza.title,
-      price : pizza.price,
-      imageUrl : pizza.imageUrl,
-      types: typeNames[activeType],
-      sizes: pizza.sizes[activeSize],
-    }
-    dispatch(addItem(item))
-  }
+  
 
   useEffect(()=>{
     
     async function fetchPizza(){
-      console.log(pizza)
       try {
         const {data} = await axios.get('https://63287ed29a053ff9aab95e51.mockapi.io/items/' + id)
-        console.log(data)
         setPizza(data);
       } catch(error) {
         alert(`can't get pizza`)
@@ -48,8 +49,23 @@ const FullPizza = () => {
   },[])
 
   if(!pizza){
-    return "loading..."
+    return <>"loading..."</>
   }
+
+  const onClickAdd = () => {
+    const item = {
+      id : pizza.id,
+      title : pizza.title,
+      price : pizza.price,
+      imageUrl : pizza.imageUrl,
+      types: typeNames[activeType],
+      sizes: pizza.sizes[activeSize],
+      count: 0,
+    }
+    dispatch(addItem(item))
+  }
+
+
   return (
     <div className='container'>
       <div className='full-pizza'>
@@ -63,9 +79,9 @@ const FullPizza = () => {
         </div>
         <div className='full-pizza__infoBlock'>
           {width > 809?
-          <div className='full-pizza__header'>
-          <p>{pizza.title}</p>
-          </div>:""}
+            <div className='full-pizza__header'>
+            <p>{pizza.title}</p>
+            </div>:""}
           <p className='full-pizza__description'>{pizza.description}</p>
           <div className="pizza-block__selector full-pizza__selector">
                   <ul>
@@ -83,7 +99,7 @@ const FullPizza = () => {
                           key={i}>{size} cm.</li>
                       ))}
                   </ul>
-                </div>
+          </div>
           <h4 className='full-pizza__price'>{pizza.price}$</h4>
           <div onClick={onClickAdd} className="button full-pizza__button">
                     <img src={iconCart} alt="add to Cart" />

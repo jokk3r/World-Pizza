@@ -4,7 +4,12 @@ import style from "./Pagination.module.scss"
 import left from "../../assets/img/left.svg"
 import right from "../../assets/img/right.svg"
 
-function Pagination({currentPage, onChangePage}) {
+type PaginationProps = {
+  currentPage:number;
+  onChangePage: (page:number)=> void
+}
+
+const Pagination: React.FC<PaginationProps> = ({currentPage, onChangePage})=> {
   let leftImg = <img src={left} alt="previous" />
   let rightImg = <img src={right} alt="next" />
   return (
@@ -17,7 +22,6 @@ function Pagination({currentPage, onChangePage}) {
         pageRangeDisplayed={4}
         pageCount={3}
         forcePage={currentPage -1}
-        renderOnZeroPageCount={null}
       />
   )
 }

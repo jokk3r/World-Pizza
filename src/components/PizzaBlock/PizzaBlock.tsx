@@ -3,26 +3,37 @@ import {useDispatch, useSelector} from 'react-redux'
 import { Link } from "react-router-dom";
 import iconCart from '../../assets/img/cart.svg'
 
-import {addItem, selectCartItemById} from '../../redux/slices/cartSlice'
+import {addItem, CartItem, selectCartItemById} from '../../redux/slices/cartSlice'
+
+type PizzaBlockType={
+  id: string;
+  title:string;
+  price:number;
+  imageUrl:string;
+  types:number[];
+  sizes:number[];
+}
 
 
-function PizzaBlock({id,title,price,imageUrl,types,sizes}){
+const PizzaBlock: React.FC<PizzaBlockType> = ({id,title,price,imageUrl,types,sizes})=>{
   
   const dispatch = useDispatch();
   const cartItem = useSelector(selectCartItemById(id))
-  const [activeType,setActiveType] = useState();
-  const [activeSize,setActiveSize] = useState();
-  const typeNames =["Thin","Standart"]
+  const [activeType,setActiveType] = useState(0);
+  const [activeSize,setActiveSize] = useState(0);
+  const typeNames = ["Thin","Standart"]
 
   const addedCount = cartItem ? cartItem.count : 0
+  
   const onClickAdd = () => {
-    const item = {
+    const item: CartItem = {
       id,
       title,
       price,
       imageUrl,
       types: typeNames[activeType],
       sizes: sizes[activeSize],
+      count: 0,
     }
     dispatch(addItem(item))
   }
@@ -30,7 +41,7 @@ function PizzaBlock({id,title,price,imageUrl,types,sizes}){
     return(
         <div className="pizza-block-wrapper">
           <div className="pizza-block">
-            <Link to={`/pizza/${id}`}>
+            <Link to={`/World-of-Pizza/pizza/${id}`}>
               <img
                 className="pizza-block__image"
                 src={imageUrl}
@@ -68,7 +79,7 @@ function PizzaBlock({id,title,price,imageUrl,types,sizes}){
                   </div>
                 </div>
               </div>
-              <Link to={`/pizza/${id}`}>
+              <Link to={`/World-of-Pizza/pizza/${id}`}>
                 <div className="pizza-block__learnMore">
                   <span>Learn More</span>
                 </div>

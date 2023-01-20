@@ -78,6 +78,7 @@
         &__nav{
          width: 262px;       
          margin:40px 80px 0px 0px;
+         position: relative;
         }
 
         &__contactInfo{
@@ -99,7 +100,7 @@
         &__text{
                 position: absolute;
                 bottom: 40px;
-                right: 120px;
+                right: 15px;
         }
     }
 }

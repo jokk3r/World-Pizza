@@ -1,7 +1,7 @@
 import React from 'react'
-import Items from "./../assets/data/ContactsItems.json"
+import Items from "../assets/data/ContactsItems.json"
 
-function Contacts() {
+const Contacts: React.FC = () => {
   return (
     <div className="container" >
         <div className="contacts">

@@ -71,6 +71,7 @@
         img{
             width: 100%;
             max-width: 600px;
+            
             @media (min-width:810px) {
                 width: 44vw;
             }
@@ -90,7 +91,7 @@
         @media (min-width:810px) {
             width: 44vw;
             margin-bottom: 100px;
-            gap: 0;
+            gap: 10px;
         }
 
         @media (min-width:1090px) {
@@ -138,10 +139,6 @@
         @media (min-width:810px) {
             width: 164px;
             margin-top: 30px;
-        }
-
-        @media (min-width:1227px) {
-             
         }
     }
 }

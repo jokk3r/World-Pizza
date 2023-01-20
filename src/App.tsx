@@ -1,4 +1,3 @@
-import React from 'react';
 
 import {
   Routes,
@@ -17,12 +16,12 @@ function App() {
   return (
               <Routes>
                 <Route path='/' element={<MainLayout/>}>
-                  <Route path='/' element={<Home/>}/>
-                  <Route path='/cart' element={<Cart/>}/>
-                  <Route path='/pizza/:id' element={<FullPizza/>}/>
+                  <Route path='/World-of-Pizza' element={<Home/>}/>
+                  <Route path='/World-of-Pizza/cart' element={<Cart/>}/>
+                  <Route path='/World-of-Pizza/pizza/:id' element={<FullPizza/>}/>
                   <Route path='*' element={<NotFound/>}/>
-                  <Route path ='/about' element={<About/>}/>
-                  <Route path ='/contacts' element={<Contacts/>}/>
+                  <Route path ='/World-of-Pizza/about' element={<About/>}/>
+                  <Route path ='/World-of-Pizza/contacts' element={<Contacts/>}/>
                 </Route>
               </Routes>
   );

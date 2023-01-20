@@ -1,18 +1,28 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { addItem, minusItem, removeItem } from '../../redux/slices/cartSlice';
+import { addItem, CartItem, minusItem, removeItem } from '../../redux/slices/cartSlice';
 import minus from '../../assets/img/cart-minus.svg'
 import plus from '../../assets/img/cart-plus.svg'
 import trash from '../../assets/img/trash-icon.svg'
 
-const CartItem = ({id, title, price, types, sizes, count, imageUrl}) => {
+type CartItemProps ={
+  id:string;
+  title:string;
+  price:number;
+  types:string;
+  sizes:number;
+  count:number;
+  imageUrl:string
+}
+
+const CartItemBlock: React.FC<CartItemProps> = ({id, title, price, types, sizes, count, imageUrl}) => {
  
     const dispatch = useDispatch();
 
     const onClickPlus = ()=>{
         dispatch(addItem({
             id
-        }))
+        } as CartItem))
     }
 
     const onClickMinus = ()=>{
@@ -63,4 +73,4 @@ const CartItem = ({id, title, price, types, sizes, count, imageUrl}) => {
   )
 }
 
-export default CartItem
+export default CartItemBlock
