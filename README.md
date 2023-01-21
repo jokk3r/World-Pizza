@@ -1,4 +1,4 @@
-# [Online shop junior project]( https://jokk3r.github.io/World-Pizza/)
+# [World of Pizza project]( https://jokk3r.github.io/World-Pizza/)
 
 # 🛠 Installation and Setup Instructions
 
