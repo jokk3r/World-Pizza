@@ -1,4 +1,4 @@
-# [Online shop junior project]( https://jokk3r.github.io/World-Pizza/)
+# [World of Pizza project]( https://jokk3r.github.io/World-Pizza/)
 
 # 🛠 Installation and Setup Instructions
 
@@ -12,7 +12,7 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 # Description
-Pizza shop is advanced project to practice my skills with React JS. 
+World of Pizza is my project to practice skills with React JS, as well as learning Typescript and other new technologies.
 
 # Technologies 
 - React JS 
