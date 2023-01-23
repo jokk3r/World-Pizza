@@ -70,15 +70,20 @@
     border: none;
     border-radius: 10px;
     background-color: #EFEFEF;
+    cursor: pointer;
    
     &:active{
         background-color: $white;
+    }
+    &-disabled{
+      opacity: 0.2;
     }
   }
  
   &__deleteItem{
     border:none;
     background: none;
+    cursor: pointer;
   }
 
   &__pay {

@@ -16,10 +16,13 @@
   @media (min-width:810px) {
     width: 100%;
     border-top: none;
-    border: 1px solid $border;
     padding: 28px 20px;
     border-collapse: collapse;
     max-width: 100%;
+    border-radius: 10px;
+    &:hover{
+      box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+    }
   }
 
   &-wrapper{

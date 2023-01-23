@@ -26,6 +26,7 @@ interface FilterSliceState{
   categoryId: number;
   currentPage: number;
   sort: Sort;
+  pageCount:number;
 }
 
 
@@ -33,6 +34,7 @@ const initialState:FilterSliceState = {
   searchValue: '',
   categoryId: 0,
   currentPage: 1,
+  pageCount: 3,
   sort:{
     name:"popularity(DESC)",
     sortProperty:SortPropertyEnum.PRICE,
@@ -47,6 +49,13 @@ export const filterSlice = createSlice({
     setCategoryId(state, action:PayloadAction<number>){
       console.log("action setCategory", action)
       state.categoryId = action.payload
+      if(action.payload === 0){
+        state.pageCount = 3
+      }else{
+        state.pageCount = 1;
+        state.currentPage = 1;
+      }
+      console.log(state.pageCount)
     },
     setSearchValue(state, action:PayloadAction<string>){
       state.searchValue = action.payload
@@ -64,9 +73,16 @@ export const filterSlice = createSlice({
       state.sort = action.payload.sort;
       state.currentPage = Number(action.payload.currentPage);
       state.categoryId = Number(action.payload.categoryId);
+      if(action.payload.currentPage === 0){
+        state.pageCount = 3
+      }else{
+        state.pageCount = 1;
+        state.currentPage = 1;
+      }
     } else {
       state.currentPage = 1;
       state.categoryId = 0;
+      state.pageCount = 3;
       state.sort = {
         name: "popularity(DESC)",
         sortProperty: SortPropertyEnum.RATING,

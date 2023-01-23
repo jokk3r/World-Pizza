@@ -1,4 +1,5 @@
 import React from 'react'
+import clsx from 'clsx'
 import { useDispatch } from 'react-redux'
 import { addItem, CartItem, minusItem, removeItem } from '../../redux/slices/cartSlice';
 import minus from '../../assets/img/cart-minus.svg'
@@ -50,7 +51,8 @@ const CartItemBlock: React.FC<CartItemProps> = ({id, title, price, types, sizes,
           <p>{types +" crust"}, {sizes} cm.</p>
         </div>
         <div className="cart__item-count">
-          <button onClick={onClickMinus} className="button__countChange">
+          <button onClick={onClickMinus} className={clsx("button__countChange",{
+            'button__countChange-disabled': count === 1})} disabled={count === 1}>
             <img src={minus} alt="minus" />
           </button>
           <b>{count}</b>

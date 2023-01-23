@@ -32,6 +32,7 @@ export type SearchPizzasParams = {
   sortBy : string;
   order : string;
   currentPage : string;
+  pageCount:string;
 }
 
 const initialState: PizzaSliceState = {

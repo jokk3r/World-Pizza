@@ -58,7 +58,8 @@ const Home: React.FC = () => {
             ({ searchValue: params.search,
               categoryId: Number(params.category),
               currentPage: Number(params.currentPage),
-              sort: sort || sortList[0]})
+              sort: sort || sortList[0],
+            pageCount:Number(params.currentPage),})
           )
         )
         isSearch.current = true;
@@ -78,6 +79,7 @@ const Home: React.FC = () => {
             sortBy:sort.sortProperty,
             order:sort.sortOrder,
             currentPage: String(currentPage),
+            pageCount:category,
           }))
       }
       useEffect(()=>{

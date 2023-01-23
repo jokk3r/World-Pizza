@@ -40,9 +40,10 @@ const FullPizza: React.FC = () => {
       try {
         const {data} = await axios.get('https://63287ed29a053ff9aab95e51.mockapi.io/items/' + id)
         setPizza(data);
+        window.scrollTo(0, 0)
       } catch(error) {
         alert(`can't get pizza`)
-        navigate('/')
+        navigate('/World-of-Pizza')
       }
     }
     fetchPizza();
