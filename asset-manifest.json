@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/World-of-Pizza/static/css/main.61bd1a85.css",
-    "main.js": "/World-of-Pizza/static/js/main.f76cbf89.js",
+    "main.css": "/World-of-Pizza/static/css/main.b3dd8285.css",
+    "main.js": "/World-of-Pizza/static/js/main.3dc88e8a.js",
     "static/media/imgMainMobile.svg": "/World-of-Pizza/static/media/imgMainMobile.37d4c99f3d194f59d7e787026167919e.svg",
     "static/media/imgMainDesk.svg": "/World-of-Pizza/static/media/imgMainDesk.14fc7206d1c2f9b4214c53e6eb40210f.svg",
     "static/media/about-main.png": "/World-of-Pizza/static/media/about-main.86844ba5f74baadc643e.png",
@@ -20,11 +20,11 @@
     "static/media/left.svg": "/World-of-Pizza/static/media/left.a1d44b4d02f53f3820ab750e744e8376.svg",
     "static/media/back-arrow.svg": "/World-of-Pizza/static/media/back-arrow.866b14c77d83b96484764bf221568cc6.svg",
     "static/media/cart-minus.svg": "/World-of-Pizza/static/media/cart-minus.7f5a76b08690538e65f2672d3e5b9de4.svg",
-    "main.61bd1a85.css.map": "/World-of-Pizza/static/css/main.61bd1a85.css.map",
-    "main.f76cbf89.js.map": "/World-of-Pizza/static/js/main.f76cbf89.js.map"
+    "main.b3dd8285.css.map": "/World-of-Pizza/static/css/main.b3dd8285.css.map",
+    "main.3dc88e8a.js.map": "/World-of-Pizza/static/js/main.3dc88e8a.js.map"
   },
   "entrypoints": [
-    "static/css/main.61bd1a85.css",
-    "static/js/main.f76cbf89.js"
+    "static/css/main.b3dd8285.css",
+    "static/js/main.3dc88e8a.js"
   ]
 }
