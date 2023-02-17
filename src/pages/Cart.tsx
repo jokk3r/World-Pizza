@@ -5,9 +5,11 @@ import {
  } from "react-router-dom";
 import CartEmpty from '../components/CartEmpty/CartEmpty';
 import CartItem from '../components/CartItem/CartItem';
-import { selectCart, clearItems } from '../redux/slices/cartSlice';
+/* import { selectCart, clearItems } from '../redux/slices/cartSlice'; */
 import cross from './../assets/img/cross-red.svg'
 import back from './../assets/img/back-arrow.svg'
+import { selectCart } from '../redux/cart/selectors';
+import { clearItems } from '../redux/cart/slice';
 
 const Cart: React.FC = () => {
 

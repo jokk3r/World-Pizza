@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import {useDispatch, useSelector} from 'react-redux'
 import { Link } from "react-router-dom";
 import iconCart from '../../assets/img/cart.svg'
+import { selectCartItemById } from "../../redux/cart/selectors";
+import { addItem } from "../../redux/cart/slice";
+import { CartItem } from "../../redux/cart/types";
 
-import {addItem, CartItem, selectCartItemById} from '../../redux/slices/cartSlice'
 
 type PizzaBlockType={
   id: string;

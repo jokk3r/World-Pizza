@@ -4,7 +4,8 @@ import style from "./Pagination.module.scss"
 import left from "../../assets/img/left.svg"
 import right from "../../assets/img/right.svg"
 import { useSelector } from 'react-redux';
-import { selectFilter } from '../../redux/slices/filterSlice';
+import { selectFilter } from '../../redux/filter/selectors';
+
 
 type PaginationProps = {
   currentPage:number;
@@ -14,10 +15,10 @@ type PaginationProps = {
 
 const Pagination: React.FC<PaginationProps> = ({currentPage, onChangePage})=> {
   
-
-  const {pageCount} = useSelector(selectFilter)
+  const { pageCount } = useSelector(selectFilter)
   let leftImg = <img src={left} alt="previous" />
   let rightImg = <img src={right} alt="next" />
+
   return (
     <ReactPaginate
         className={style.root}

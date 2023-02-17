@@ -2,8 +2,6 @@ import React,{ useEffect,useRef } from 'react';
 import { useSelector} from 'react-redux'
 import qs from 'qs'
 import { useNavigate} from 'react-router-dom'
-import {selectFilter, setCategoryId, setCurrentPage, setFilters} from "../redux/slices/filterSlice"
-import {fetchPizzas, SearchPizzasParams, selectPizzaData} from '../redux/slices/pizzaSlice'
 import Categories from '../components/Categories/Categories';
 import Pagination from '../components/Pagination/Pagination';
 import PizzaBlock from '../components/PizzaBlock/PizzaBlock';
@@ -14,6 +12,11 @@ import imgMainDesk from './../assets/img/imgMainDesk.svg';
 import Search from '../components/Search/Search';
 import {useWindowWidth} from '../hooks/useWindowWidth';
 import { useAppDispatch } from '../redux/store';
+import { selectPizzaData } from '../redux/pizza/selectors';
+import { selectFilter } from '../redux/filter/selectors';
+import { setCategoryId, setCurrentPage, setFilters } from '../redux/filter/slice';
+import { SearchPizzasParams } from '../redux/pizza/types';
+import { fetchPizzas } from '../redux/pizza/asyncActions';
 
 const Home: React.FC = () => {
     const navigate = useNavigate();
@@ -42,7 +45,6 @@ const Home: React.FC = () => {
           currentPage,
         })
         navigate(`/World-of-Pizza/?${queryString}`)
-        console.log(navigate)
       }
       isMounted.current = true
     },[categoryId,sort,searchValue,currentPage])
@@ -56,10 +58,10 @@ const Home: React.FC = () => {
       
         dispatch(setFilters(
             ({ searchValue: params.search,
-              categoryId: Number(params.category),
+              categoryId: Number(params.category) || 0 ,
               currentPage: Number(params.currentPage),
               sort: sort || sortList[0],
-            pageCount:Number(params.currentPage),})
+              pageCount:Number(params.currentPage),})
           )
         )
         isSearch.current = true;
@@ -111,7 +113,7 @@ const Home: React.FC = () => {
       <h2 className="content__title">All Pizza</h2>
       <div className="content__top">
         <Categories value={categoryId} onChangeCategory={onChangeCategory}/>
-        <Sort />
+        <Sort value={sort} />
       </div>
         {status === 'error' ? (
           <div className='content__error-info'>

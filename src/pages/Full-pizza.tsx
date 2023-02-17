@@ -3,9 +3,10 @@ import axios from 'axios';
 import {useDispatch, useSelector} from 'react-redux'
 import { useEffect } from 'react';
 import {useNavigate, useParams} from 'react-router-dom'
-import {addItem, CartItem, selectCartItemById} from '../redux/slices/cartSlice'
 import iconCart from '../assets/img/cart.svg';
 import { useWindowWidth } from '../hooks/useWindowWidth';
+import { selectCartItemById } from '../redux/cart/selectors';
+import { addItem } from '../redux/cart/slice';
 
 
 const FullPizza: React.FC = () => {

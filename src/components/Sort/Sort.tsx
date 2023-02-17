@@ -1,8 +1,8 @@
 import React, { useState,useRef,useEffect } from "react";
-
-import { useDispatch, useSelector} from 'react-redux'
-import {selectSort, setSort, SortOrderEnum, SortPropertyEnum} from '../../redux/slices/filterSlice'
+import { useDispatch} from 'react-redux'
 import arrow from '../../assets/img/arrow.svg'
+import { setSort } from "../../redux/filter/slice";
+import { Sort, SortOrderEnum, SortPropertyEnum } from "../../redux/filter/types";
 
 type SortItem = {
   name: string;
@@ -13,6 +13,9 @@ type SortItem = {
 type PopupClick = MouseEvent & {
   path:Node[]
 }; 
+type SortPopupProps = {
+  value: Sort;
+}
 
 export const sortList: SortItem[] = [
 {name:"Popularity(DESC)",sortProperty:SortPropertyEnum.RATING,sortOrder:SortOrderEnum.DESC},
@@ -22,9 +25,9 @@ export const sortList: SortItem[] = [
 {name:"Title(DESC)",sortProperty:SortPropertyEnum.TITLE,sortOrder:SortOrderEnum.DESC},
 {name:"Title(ASC)",sortProperty:SortPropertyEnum.TITLE,sortOrder:SortOrderEnum.ASC}]
 
-function SortPopup(){
+const SortPopup: React.FC<SortPopupProps> = React.memo(({value}) => {
   const dispatch = useDispatch()
-  const sort = useSelector(selectSort)
+
 
   const [open, setOpen] = useState(false);
   const sortRef = useRef<HTMLDivElement>(null);
@@ -51,14 +54,14 @@ function SortPopup(){
                 <div className="sort__label">
                   <img src={arrow} alt="arrow" />
                   <b>Sort by</b>
-                  <span onClick={()=>setOpen(!open)}>{sort.name}</span>
+                  <span onClick={()=>setOpen(!open)}>{value.name}</span>
                 </div>
                 {open  &&
                  (<div className="sort__popup">
                     <ul>
                     {sortList.map((obj,i)=>(
                       <li onClick={()=>onClickListItem(obj)}
-                        className={sort.name === obj.name ? "active":""}
+                        className={value.name === obj.name ? "active":""}
                         key={i}
                       >{obj.name}</li>
                       ))}
@@ -67,6 +70,6 @@ function SortPopup(){
                 }      
       </div>
     )
-  }
+  })
 
 export default SortPopup
