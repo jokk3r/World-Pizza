@@ -1,7 +1,12 @@
 {
   "files": {
-    "main.css": "/World-of-Pizza/static/css/main.b3dd8285.css",
-    "main.js": "/World-of-Pizza/static/js/main.3dc88e8a.js",
+    "main.css": "/World-of-Pizza/static/css/main.fc09b2b3.css",
+    "main.js": "/World-of-Pizza/static/js/main.d6a309fd.js",
+    "cart.js": "/World-of-Pizza/static/js/cart.dba5cbc8.chunk.js",
+    "NotFound.js": "/World-of-Pizza/static/js/NotFound.550dfceb.chunk.js",
+    "FullPizza.js": "/World-of-Pizza/static/js/FullPizza.39981061.chunk.js",
+    "About.js": "/World-of-Pizza/static/js/About.ee2dd53c.chunk.js",
+    "Contacts.js": "/World-of-Pizza/static/js/Contacts.b7dd7a1a.chunk.js",
     "static/media/imgMainMobile.svg": "/World-of-Pizza/static/media/imgMainMobile.37d4c99f3d194f59d7e787026167919e.svg",
     "static/media/imgMainDesk.svg": "/World-of-Pizza/static/media/imgMainDesk.14fc7206d1c2f9b4214c53e6eb40210f.svg",
     "static/media/about-main.png": "/World-of-Pizza/static/media/about-main.86844ba5f74baadc643e.png",
@@ -20,11 +25,16 @@
     "static/media/left.svg": "/World-of-Pizza/static/media/left.a1d44b4d02f53f3820ab750e744e8376.svg",
     "static/media/back-arrow.svg": "/World-of-Pizza/static/media/back-arrow.866b14c77d83b96484764bf221568cc6.svg",
     "static/media/cart-minus.svg": "/World-of-Pizza/static/media/cart-minus.7f5a76b08690538e65f2672d3e5b9de4.svg",
-    "main.b3dd8285.css.map": "/World-of-Pizza/static/css/main.b3dd8285.css.map",
-    "main.3dc88e8a.js.map": "/World-of-Pizza/static/js/main.3dc88e8a.js.map"
+    "main.fc09b2b3.css.map": "/World-of-Pizza/static/css/main.fc09b2b3.css.map",
+    "main.d6a309fd.js.map": "/World-of-Pizza/static/js/main.d6a309fd.js.map",
+    "cart.dba5cbc8.chunk.js.map": "/World-of-Pizza/static/js/cart.dba5cbc8.chunk.js.map",
+    "NotFound.550dfceb.chunk.js.map": "/World-of-Pizza/static/js/NotFound.550dfceb.chunk.js.map",
+    "FullPizza.39981061.chunk.js.map": "/World-of-Pizza/static/js/FullPizza.39981061.chunk.js.map",
+    "About.ee2dd53c.chunk.js.map": "/World-of-Pizza/static/js/About.ee2dd53c.chunk.js.map",
+    "Contacts.b7dd7a1a.chunk.js.map": "/World-of-Pizza/static/js/Contacts.b7dd7a1a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b3dd8285.css",
-    "static/js/main.3dc88e8a.js"
+    "static/css/main.fc09b2b3.css",
+    "static/js/main.d6a309fd.js"
   ]
 }

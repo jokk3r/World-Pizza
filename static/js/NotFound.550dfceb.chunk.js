@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkpizza_shop=self.webpackChunkpizza_shop||[]).push([[187],{4949:function(s,u,e){e.r(u);e(2791);var n=e(687),p=e(184);u.default=function(){return(0,p.jsx)(n.vr,{})}}}]);
+//# sourceMappingURL=NotFound.550dfceb.chunk.js.map
