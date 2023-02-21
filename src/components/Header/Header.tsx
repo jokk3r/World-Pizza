@@ -10,7 +10,9 @@ import { useSelector } from 'react-redux';
 import { useWindowWidth } from '../../hooks/useWindowWidth';
 import { selectCart } from '../../redux/cart/selectors';
 
-function Header(){
+
+export const Header: React.FC = () =>{
+
   const {items, totalPrice} = useSelector(selectCart)
   const [width] = useWindowWidth();
   const {pathname} = useLocation()
@@ -65,6 +67,4 @@ function Header(){
           </div>
         </div>
     )
-  }
-
-export default Header;
+}

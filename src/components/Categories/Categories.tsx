@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useWindowWidth } from '../../hooks/useWindowWidth';
-import Search from '../Search/Search';
+import {Search} from '../index'
 import { useWhyDidYouUpdate } from 'ahooks';
 
 type CategoriesProps ={
@@ -9,7 +9,7 @@ type CategoriesProps ={
 }
 const categories =["All","Meatlover","Veggie","Traditional","Hot","Spicy",]
 
-const Categories: React.FC<CategoriesProps> = React.memo(({value, onChangeCategory})=>{
+export const Categories: React.FC<CategoriesProps> = React.memo(({value, onChangeCategory})=>{
 
   useWhyDidYouUpdate("Categories",{value, onChangeCategory})
   const [width] = useWindowWidth();
@@ -29,5 +29,3 @@ const Categories: React.FC<CategoriesProps> = React.memo(({value, onChangeCatego
     </div>
     )
   })
-
-export default Categories

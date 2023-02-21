@@ -3,9 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import {
   Link
  } from "react-router-dom";
-import CartEmpty from '../components/CartEmpty/CartEmpty';
-import CartItem from '../components/CartItem/CartItem';
-/* import { selectCart, clearItems } from '../redux/slices/cartSlice'; */
+import {CartEmpty, CartItemBlock} from '../components/index';
 import cross from './../assets/img/cross-red.svg'
 import back from './../assets/img/back-arrow.svg'
 import { selectCart } from '../redux/cart/selectors';
@@ -40,7 +38,7 @@ const Cart: React.FC = () => {
       </div>
       <div className="content__items">
         {
-          items.map((item: any) => <CartItem key={item.id} {...item}/>)
+          items.map((item: any) => <CartItemBlock key={item.id} {...item}/>)
         }
       </div>
       <div className="cart__bottom">

@@ -6,7 +6,7 @@ import { useDispatch } from 'react-redux'
 import iconSearch from '../../assets/img/Search.svg'
 import { setSearchValue } from '../../redux/filter/slice'
 
-const Search: React.FC = () =>{
+export const Search: React.FC = () =>{
 
 const dispatch = useDispatch()
 const [value, setValue] = useState<string>('')
@@ -46,4 +46,3 @@ const onChangeInput = (event:React.ChangeEvent<HTMLInputElement>)=>{
   )
 }
 
-export default Search

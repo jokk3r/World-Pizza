@@ -2,14 +2,9 @@ import React,{ useEffect,useRef } from 'react';
 import { useSelector} from 'react-redux'
 import qs from 'qs'
 import { useNavigate} from 'react-router-dom'
-import Categories from '../components/Categories/Categories';
-import Pagination from '../components/Pagination/Pagination';
-import PizzaBlock from '../components/PizzaBlock/PizzaBlock';
-import Skeleton from '../components/PizzaBlock/Skeleton';
-import Sort, { sortList } from '../components/Sort/Sort';
+import {Categories, Pagination, PizzaBlock, Skeleton, SortPopup, sortList, Search} from '../components/index';
 import imgMainMobile from './../assets/img/imgMainMobile.svg';
 import imgMainDesk from './../assets/img/imgMainDesk.svg';
-import Search from '../components/Search/Search';
 import {useWindowWidth} from '../hooks/useWindowWidth';
 import { useAppDispatch } from '../redux/store';
 import { selectPizzaData } from '../redux/pizza/selectors';
@@ -113,7 +108,7 @@ const Home: React.FC = () => {
       <h2 className="content__title">All Pizza</h2>
       <div className="content__top">
         <Categories value={categoryId} onChangeCategory={onChangeCategory}/>
-        <Sort value={sort} />
+        <SortPopup value={sort} />
       </div>
         {status === 'error' ? (
           <div className='content__error-info'>

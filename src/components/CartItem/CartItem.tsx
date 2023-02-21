@@ -18,7 +18,7 @@ type CartItemProps ={
   imageUrl:string
 }
 
-const CartItemBlock: React.FC<CartItemProps> = ({id, title, price, types, sizes, count, imageUrl}) => {
+export const CartItemBlock: React.FC<CartItemProps> = ({id, title, price, types, sizes, count, imageUrl}) => {
  
     const dispatch = useDispatch();
 
@@ -77,4 +77,3 @@ const CartItemBlock: React.FC<CartItemProps> = ({id, title, price, types, sizes,
   )
 }
 
-export default CartItemBlock

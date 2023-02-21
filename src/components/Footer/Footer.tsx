@@ -4,7 +4,7 @@ import logoBlack from "../../assets/img/logo-black.svg"
 import { Link } from 'react-router-dom';
 import { useWindowWidth } from '../../hooks/useWindowWidth';
 
-function Footer() {
+export const Footer: React.FC = () => {
   const [width] = useWindowWidth();
   return (
     <div className={styles.footer__main}>
@@ -48,4 +48,3 @@ function Footer() {
   )
 }
 
-export default Footer

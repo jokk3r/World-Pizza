@@ -13,7 +13,7 @@ type PaginationProps = {
 }
 
 
-const Pagination: React.FC<PaginationProps> = ({currentPage, onChangePage})=> {
+export const Pagination: React.FC<PaginationProps> = ({currentPage, onChangePage})=> {
   
   const { pageCount } = useSelector(selectFilter)
   let leftImg = <img src={left} alt="previous" />
@@ -33,4 +33,3 @@ const Pagination: React.FC<PaginationProps> = ({currentPage, onChangePage})=> {
   )
 }
 
-export default Pagination

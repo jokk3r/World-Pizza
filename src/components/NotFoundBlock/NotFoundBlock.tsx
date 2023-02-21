@@ -3,7 +3,7 @@ import styles from './NotFoundBlock.module.scss';
 import error from './../../assets/img/404error.png'
 import { Link } from 'react-router-dom';
 
-const NotFoundBlock: React.FC = ()=> {
+export const NotFoundBlock: React.FC = ()=> {
   return (
     <div className={styles.root}>
         <img src={error} alt="error" />
@@ -16,4 +16,3 @@ const NotFoundBlock: React.FC = ()=> {
   )
 }
 
-export default NotFoundBlock

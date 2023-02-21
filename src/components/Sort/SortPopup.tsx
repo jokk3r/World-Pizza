@@ -25,7 +25,7 @@ export const sortList: SortItem[] = [
 {name:"Title(DESC)",sortProperty:SortPropertyEnum.TITLE,sortOrder:SortOrderEnum.DESC},
 {name:"Title(ASC)",sortProperty:SortPropertyEnum.TITLE,sortOrder:SortOrderEnum.ASC}]
 
-const SortPopup: React.FC<SortPopupProps> = React.memo(({value}) => {
+export const SortPopup: React.FC<SortPopupProps> = React.memo(({value}) => {
   const dispatch = useDispatch()
 
 
@@ -72,4 +72,3 @@ const SortPopup: React.FC<SortPopupProps> = React.memo(({value}) => {
     )
   })
 
-export default SortPopup

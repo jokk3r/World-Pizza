@@ -4,10 +4,6 @@ import { PizzaItem, PizzaSliceState, Status } from './types';
 import { fetchPizzas } from './asyncActions';
 
 
-
- 
-
-
 const initialState: PizzaSliceState = {
   items: [],
   status: Status.LOADING, //loading | success | error
